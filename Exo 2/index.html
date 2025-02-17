@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Text Analysis Tool</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="app-header">
+        <h1>Text Analysis Tool</h1>
+        <div class="file-controls">
+          <div class="file-upload">
+            <input type="file" id="fileInput" class="file-input" accept=".txt">
+            <label for="fileInput" class="file-label">Choose File</label>
+            <span id="fileName" class="file-name">No file chosen</span>
+          </div>
+          <div class="file-info" style="display: none;">
+            <div id="fileDetails" class="file-details"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="search-section">
+          <div class="analysis-type">
+            <label>Analysis Type:</label>
+            <select id="analysisType" class="select-field">
+              <option value="compound">Compound Words</option>
+              <option value="named">Named Entities</option>
+            </select>
+          </div>
+
+          <div class="search-results">
+            <div class="result-info">
+              <label>Found Items:</label>
+              <span id="itemCount">0</span>
+            </div>
+
+            <div class="found-items" style="display: none;">
+              <label>Detected Items:</label>
+              <ul id="itemsList" class="items-list"></ul>
+            </div>
+          </div>
+
+          <div class="patterns-section" style="display: none;">
+            <div class="patterns-header">
+              <h3>Detection Patterns</h3>
+            </div>
+            <div class="patterns-content" id="patternsInfo">
+            </div>
+          </div>
+        </div>
+
+        <div class="text-display">
+          <div id="textContent" class="text-content"></div>
+          <div class="legend">
+            <div class="legend-item"><span class="color-box compound"></span>Composer</div>
+            <div class="legend-item"><span class="color-box named"></span>Nommer</div>
+          </div>
+        </div>
+      </div>
+
+      <button id="clearBtn" class="btn danger">Clear All</button>
+    </div>
+  </body>
+</html>

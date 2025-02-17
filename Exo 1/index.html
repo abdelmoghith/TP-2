@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tp 2</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="app-header">
+        <h1>Tp 2</h1>
+        <div class="file-controls">
+          <div class="file-upload">
+            <input type="file" id="fileInput" class="file-input" accept=".txt">
+            <label for="fileInput" class="file-label">choose file</label>
+            <span id="fileName" class="file-name"></span>
+          </div>
+          <div class="file-info" style="display: none;">
+            <div id="fileDetails" class="file-details"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="search-section">
+          <div class="search-controls">
+            <input type="text" id="searchWord" class="text-field" placeholder="Enter word to search">
+            <button id="searchBtn" class="btn secondary">search</button>
+          </div>
+
+          <div class="search-results">
+            <div class="result-info">
+              <label>occurrence:</label>
+              <span id="occurrenceCount">0</span>
+            </div>
+ <div class="" style="display: none;">
+  <div class="result-info">
+    <label>Les mot composer:</label>
+    <span id="motcomposer">0</span>
+  </div>
+  <div class="result-info">
+    <label>les mot nommer:</label>
+    <span id="motnommer">0</span>
+  </div>
+ </div>
+
+            <div class="positions-section">
+              <label>Positions:</label>
+              <select id="positionSelect" class="select-field">
+                <option value=""> position</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="context-section">
+            <div class="context-inputs">
+              <div class="input-group">
+                <label> before:</label>
+                <input type="number" id="lettersBefore" class="number-field" value="3" min="1" max="10">
+              </div>
+              <div class="input-group">
+                <label> after:</label>
+                <input type="number" id="lettersAfter" class="number-field" value="3" min="1" max="10">
+              </div>
+            </div>
+            <button id="showContextBtn" class="btn secondary">search</button>
+          </div>
+        </div>
+
+        <div class="text-display">
+          <div id="textContent" class="text-content"></div>
+          <div class="legend">
+            <div class="legend-item"><span class="color-box search"></span>Search </div>
+            <div class="legend-item"><span class="color-box before"></span> before</div>
+            <div class="legend-item"><span class="color-box after"></span> after</div>
+          </div>
+        </div>
+      </div>
+
+      <button id="clearBtn" class="btn danger">Clear All</button>
+    </div>
+  </body>
+</html>
